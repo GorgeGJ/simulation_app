@@ -35,9 +35,9 @@ The app performs a 3-step simulation:
 
 ```bash
 git clone https://github.com/your-username/pillar-contribution-app.git
-cd pillar-contribution-app
-pip install -r requirements.txt
-streamlit run app.py
+cd simulation-app
+python3 -m pip install -r requirements.txt
+python3 -m streamlit run app.py
 ```
 
 ## 🌐 Live App
