@@ -42,7 +42,7 @@ streamlit run app.py
 
 ## 🌐 Live App
 
-> [🔗 Click here to launch the app on Streamlit Cloud]([https://your-app.streamlit.app](https://simulationapp-9wgnjks7jfekhtg5k3mmwo.streamlit.app/))
+> [🔗 Click here to launch the app on Streamlit Cloud]([https://your-app.streamlit.app](https://simulationapp-9wgnjks7jfekhtg5k3mmwo.streamlit.app))
 
 ## 📦 Requirements
 
