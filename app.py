@@ -74,20 +74,27 @@ if pillar_file and channel_file:
 
     unique_pillars = pillar_output["pillar"].unique()
     unique_channels = pillar_output["channel"].unique()
-    unique_weeks = sorted(pillar_output["week"].unique())
+    pillar_output["week_numeric"] = pillar_output["week"].str.extract(r'(\d{4})-W(\d{2})').apply(lambda x: int(x[0]) * 100 + int(x[1]), axis=1)
+    week_map = dict(zip(pillar_output["week_numeric"], pillar_output["week"]))
+    unique_weeks = sorted(week_map.keys())
 
     selected_pillar = st.selectbox("Select a pillar:", unique_pillars)
     selected_metric = st.radio("Choose a metric to chart:", ["pillar_contribution", "event", "spend"])
     selected_channels = st.multiselect("Filter by channel(s):", unique_channels, default=unique_channels)
-    week_range = st.slider("Select week range:", min_value=min(unique_weeks), max_value=max(unique_weeks),
-                           value=(min(unique_weeks), max(unique_weeks)))
+    week_range = st.slider(
+    "Select week range:",
+    min_value=min(unique_weeks),
+    max_value=max(unique_weeks),
+    value=(min(unique_weeks), max(unique_weeks))
+)
 
+    # Filter and convert week_numeric back to week string
     filtered_df = pillar_output[
         (pillar_output["pillar"] == selected_pillar) &
         (pillar_output["channel"].isin(selected_channels)) &
-        (pillar_output["week"] >= week_range[0]) &
-        (pillar_output["week"] <= week_range[1])
-    ]
+        (pillar_output["week_numeric"] >= week_range[0]) &
+        (pillar_output["week_numeric"] <= week_range[1])
+]
 
     chart_df = filtered_df.groupby("week")[[selected_metric]].sum().reset_index().sort_values("week")
 
