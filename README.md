@@ -25,7 +25,7 @@ A lightweight Streamlit app that helps simulate and visualize **pillar-level mar
 
 ## 🛠 How It Works
 
-The app performs a 3-step simulation:
+The app performs a 3-step simulation (can be replaced with any simulation functions):
 
 1. **Channel Effectiveness** = contribution ÷ total events for that channel in a week  
 2. **Pillar Weight** = regression coefficient between `event` and `contribution` for each channel, normalized to `[0.7, 1.3]`  
@@ -56,8 +56,7 @@ matplotlib
 
 ## ✨ Future Improvements
 
-- Add support for weekly time-series forecasting
-- Upload zipped input templates
+- Data Input Validations
 - Save sessions with historical simulations
 - Enhanced charting with Plotly
 
