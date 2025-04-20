@@ -1,6 +1,8 @@
 # 📊 Pillar Contribution Simulator
 
-A lightweight Streamlit app that helps simulate and visualize **pillar-level marketing contributions** from user-uploaded CSV files. Built for data scientists and marketers to better understand how media inputs drive value across different marketing pillars. [Disclainmer] The whole project is only for streamlit skillset practice purpose. All of the data and functon are just sample.
+A lightweight Streamlit app that helps simulate and visualize **pillar-level marketing contributions** from user-uploaded CSV files. Built for data scientists and marketers to better understand how media inputs drive value across different marketing pillars. 
+
+[Disclainmer] The whole project is only for Jie's streamlit skillset practice purpose. All of the data and functon are just sample.
 
 ## 🚀 Features
 
