@@ -2,7 +2,8 @@
 
 A lightweight Streamlit app that helps simulate and visualize **pillar-level marketing contributions** from user-uploaded CSV files. Built for data scientists and marketers to better understand how media inputs drive value across different marketing pillars. 
 
-[Disclainmer] The whole project is only for Jie's streamlit skillset practice purpose. All of the data and functon are just sample.
+[Disclainmer] This project is solely for Jie's Streamlit skillset practice.
+All data, functionality, and simulations included are entirely sample-based and do not reflect any real business use case.
 
 ## 🚀 Features
 
